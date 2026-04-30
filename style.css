@@ -14,8 +14,6 @@
   color: white;
   box-shadow: 0 2px 15px black;
   padding: 0 40px;
-  max-width: 1200px;
-  border-radius: 0 0 10px 10px;
 }
 
 .nome {
@@ -66,4 +64,42 @@
 
 .menu a:hover {
   color: cadetblue;
+}
+
+.conteudo {
+  display: flex;
+  flex-direction: column;
+  background-image:
+    linear-gradient(to right, black 30%, #00000000),
+    linear-gradient(to bottom, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 100%),
+    url(imagens/notebook.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  box-shadow: 0 2px 20px;
+  height: 400px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  gap: 4px;
+  justify-content: center;
+  padding: 0 100px;
+  font-size: 20px;
+  text-shadow: 5px 5px 15px black;
+  position: relative;
+}
+
+.conteudo .subtitulo {
+  display: flex;
+  color: aquamarine;
+}
+
+.conteudo .titulo {
+  display: flex;
+  color: white;
+  font-size: 40px;
+}
+
+.conteudo .descricao {
+  display: flex;
+  color: #ccc;
+  max-width: 250px;
 }
