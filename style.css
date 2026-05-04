@@ -1,6 +1,24 @@
+:root {
+  /* fundo preto */
+  --bg-main: black;
+
+  /* texto primario */
+  --text-primary: white;  
+
+  /* texto secundario */
+  --text-secondary: #ccc;
+
+  /* destaque */
+  --emphasis: aquamarine
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
+}
+
+body {
+  background-color: var(--bg-main);
 }
 
 .cabecalho {
@@ -10,23 +28,22 @@
   box-sizing: border-box;
   height: 120px;
   margin: 0 auto;
-  background-color: black;
-  color: white;
-  box-shadow: 0 2px 15px black;
+  background-color: var(--bg-main);
+  color: var(--text-primary);
+  box-shadow: 0 2px 15px var(--bg-main);
   padding: 0 40px;
 }
 
 .nome {
   align-items: center;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  font-size: 30px;
   font-weight: bold;
 }
 
 .descricao {
   align-items: center;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  color: #ccc;
+  color: var(--text-secondary);
 }
 
 .nome-descricao {
@@ -53,11 +70,11 @@
 }
 
 .menu a.ativo {
-  color: aquamarine;
+  color: var(--emphasis);
 } 
 
 .menu a{
-  color: #ccc;
+  color: var(--text-secondary);
   text-decoration: none;
   transition: 0.2s;
 }
@@ -69,37 +86,87 @@
 .conteudo {
   display: flex;
   flex-direction: column;
+
   background-image:
-    linear-gradient(to right, black 30%, #00000000),
+    linear-gradient(to right, black 20%, #00000000),
     linear-gradient(to bottom, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 100%),
+    linear-gradient(to top, rgba(0,0,0,0.8) 0.0%, rgba(0,0,0,0) 100%),
     url(imagens/notebook.jpg);
+
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   box-shadow: 0 2px 20px;
-  height: 400px;
+  height: 460px;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   gap: 4px;
   justify-content: center;
   padding: 0 100px;
-  font-size: 20px;
-  text-shadow: 5px 5px 15px black;
+  font-size: 30px;
+  text-shadow: 5px 5px 15px var(--bg-main);
   position: relative;
 }
 
 .conteudo .subtitulo {
   display: flex;
-  color: aquamarine;
+  color: var(--emphasis);
 }
 
 .conteudo .titulo {
   display: flex;
-  color: white;
-  font-size: 40px;
+  color: var(--text-primary);
+  font-size: 50px;
 }
 
 .conteudo .descricao {
   display: flex;
-  color: #ccc;
-  max-width: 250px;
+  color: var(--text-secondary);
+  max-width: 400px;
 }
+
+.ferramentas {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-top: 50px;
+}
+
+.ferramentas .titulo {
+  color: var(--emphasis);
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.ferramentas .descricao {
+  font-size: 21px;
+}
+
+.cards {
+  display: flex;
+  gap: 20px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  height: 200px;
+  padding: 10px;
+  background-color: white;
+  border-radius: 20px;
+  gap: 10px;
+}
+
+.imagem-cards {
+  max-width: 80px;
+  max-height: 80px;
+}
+
+.titulo-cards {
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: black;
+}
+
+footer {margin: 100px;}

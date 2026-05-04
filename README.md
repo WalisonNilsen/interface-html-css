@@ -1,4 +1,4 @@
-# Projeto: Interface Web com HTML e CSS
+# Projeto: Curriculo online
 
 Projeto desenvolvido com foco em aprendizado de frontend, aplicando conceitos de estruturação de layout e interações visuais sem uso de JavaScript.
 
