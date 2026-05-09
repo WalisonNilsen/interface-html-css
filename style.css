@@ -17,8 +17,13 @@
   margin: 0;
 }
 
+html {
+  scroll-behavior:smooth;
+}
+
 body {
   background-color: var(--bg-main);
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 .cabecalho {
@@ -35,13 +40,11 @@ body {
 }
 
 .nome {
-  align-items: center;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   font-weight: bold;
 }
 
 .descricao {
-  align-items: center;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   color: var(--text-secondary);
 }
@@ -88,7 +91,7 @@ body {
   flex-direction: column;
 
   background-image:
-    linear-gradient(to right, black 20%, #00000000),
+    linear-gradient(to right, var(--bg-main) 20%, #00000000),
     linear-gradient(to bottom, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 100%),
     linear-gradient(to top, rgba(0,0,0,0.8) 0.0%, rgba(0,0,0,0) 100%),
     url(imagens/notebook.jpg);
@@ -98,7 +101,6 @@ body {
   background-repeat: no-repeat;
   box-shadow: 0 2px 20px;
   height: 460px;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   gap: 4px;
   justify-content: center;
   padding: 0 100px;
@@ -129,21 +131,25 @@ body {
   flex-direction: column;
   align-items: center;
   gap: 10px;
-  margin-top: 50px;
+  margin-top: 80px;
 }
 
-.ferramentas .titulo {
+.titulo {
   color: var(--emphasis);
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
-.ferramentas .descricao {
-  font-size: 21px;
+.descricao.geral {
+  font-size: 25px;
 }
 
 .cards {
   display: flex;
   gap: 20px;
+  flex-wrap: wrap;
+}
+
+.card:hover {
+  transform:scale(1.05);
 }
 
 .card {
@@ -154,9 +160,10 @@ body {
   width: 200px;
   height: 200px;
   padding: 10px;
-  background-color: white;
+  background-color: var(--text-primary);
   border-radius: 20px;
   gap: 10px;
+  transition: 0.2s;
 }
 
 .imagem-cards {
@@ -165,8 +172,122 @@ body {
 }
 
 .titulo-cards {
-  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  color: black;
+  color: var(--bg-main);
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
 
-footer {margin: 100px;}
+.projetos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin: 100px 0 0;
+}
+
+.card-projeto {
+  display: flex;
+  gap: 60px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.projeto {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  height: 350px;
+  background-color: var(--text-primary);
+  overflow: hidden;
+  border-radius: 0 0 20px 20px;
+  text-align: center;
+  gap: 10px;
+  transition: 0.2s;
+}
+
+.projeto:hover {
+  transform: scale(1.02);
+}
+
+.projeto img {
+  max-width: 100%;
+  max-height: 80%;
+}
+
+.projeto p {
+  margin: 0 10px;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+
+  background: linear-gradient(
+    to bottom,
+    rgb(14, 13, 20, 0) 0%,
+    rgb(14, 13, 20, 0.7) 15%,
+    rgb(14, 13, 20) 30%
+  );
+
+  padding: 100px 0;
+  margin-top: 100px;
+}
+
+.rodape {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+
+footer .subtitulo {
+  color: var(--text-primary);
+  font-size: 25px;
+}
+
+.entre-em-contato {
+  color: var(--text-secondary);
+  font-size: 15px;
+}
+
+footer .titulo {
+  font-size: 21px;
+}
+
+footer img {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+}
+
+.cards-rodape {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.card-rodape {
+  display: flex;
+  padding: 10px;
+  gap: 10px;
+  color: var(--text-primary);
+  background-color: rgb(20, 20, 30);
+  border: 1px solid rgb(9, 9, 9);
+  border-radius: 10px;
+  transition: 0.2s;
+}
+
+.card-rodape:hover {
+  transform: scale(1.05);
+}
+
+.card-rodape-texto {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: var(--text-primary);
+  gap: 5px;
+}
